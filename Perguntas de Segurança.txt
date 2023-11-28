@@ -1,0 +1,311 @@
+1 - A autenticação de dois fatores (2FA) é um método de segurança que adiciona uma camada adicional de autenticação além da senha tradicional. . Como funciona, no caso, qual é essa camada adicional de segurança?
+a) Usuário e senha únicos
+b) Verificação por SMS
+c) Senha longa e complexa
+d) Firewall de última geração
+
+2 - A engenharia social é uma abordagem que explora a manipulação psicológica para obter informações confidenciais ou acesso não autorizado. Mas como isso funciona?
+a) Um método para criptografar dados
+b) Uma técnica para manipular pessoas e obter informações confidenciais
+c) Um tipo de firewall
+d) Um protocolo de segurança de rede
+
+3 - Um ataque de "phishing" é um tipo de ataque cibernético que envolve enganar as vítimas para que revelem informações confidenciais. Mas como isso é realizado?
+a) Fazendo um ataque de negação de serviço (DDoS)
+b) Fazendo Uma técnica de engenharia social para obter senhas
+c) Fazendo Um método para criptografar e-mails
+d) Fazendo Uma técnica de criptografia de dados
+
+4 - Qual das seguintes opções é uma prática recomendada para criar senhas seguras?
+a) Usar a mesma senha para todas as contas
+b) Usar senhas curtas e simples
+c) Usar senhas complexas com letras, números e caracteres especiais
+d) Compartilhar senhas com colegas de trabalho
+
+5 - O que é um firewall em segurança de rede?
+a) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+b) Uma técnica para ocultar endereços IP
+c) Um software usado para monitorar o tráfego de rede e bloquear atividades suspeitas
+d) Um protocolo de criptografia de dados
+
+6 - Qual das seguintes opções é uma medida de segurança para proteger um computador contra malware?
+a) Desativar todas as atualizações de software
+b) Instalar um antivírus atualizado
+c) Compartilhar regularmente arquivos desconhecidos
+d) Usar senhas fracas
+
+7 - O que é Ransomware?
+a) Um ataque que rouba informações pessoais
+b) Um ataque que sequestra arquivos e exige um resgate para recuperá-los
+c) Um ataque que sobrecarrega um servidor de rede
+d) Um ataque que danifica fisicamente o hardware de um computador
+
+8 - A criptografia é usada para proteger dados sensíveis durante a transmissão e armazenamento mas exatamente o que é criptografia?
+a) Um tipo de malware
+b) Um dispositivo de firewall
+c) Um processo de codificação de dados para torná-los ilegíveis sem a chave correta
+d) Um protocolo de autenticação de rede
+
+9 - Qual é a principal ameaça à segurança da informação que envolve o uso não autorizado de senhas roubadas ou vazadas?
+a) Ataque de phishing
+b) Ataque de negação de serviço (DDoS)
+c) Ataque de força bruta
+d) Ataque de engenharia social
+
+10 - O que é um "patch" de segurança?
+a) Um dispositivo de proteção de rede
+b) Um tipo de senha complexa
+c) Uma atualização de software projetada para corrigir vulnerabilidades de segurança
+d) Uma técnica de criptografia de e-mail
+
+11 - O que é um ataque de força bruta?
+
+a) Um ataque que explora vulnerabilidades no software
+b) Um ataque que tenta todas as combinações possíveis de senhas até encontrar a correta
+c) Um ataque que sequestra arquivos e exige um resgate
+d) Um ataque que envolve a engenharia social
+
+12 - O que é um certificado SSL e qual é sua função na segurança de informações?
+
+a) Um software de criptografia de e-mails
+b) Um tipo de ataque de negação de serviço (DDoS)
+c) Um protocolo de segurança de rede
+d) Um protocolo de criptografia usado para proteger a comunicação na internet
+
+13 - O que é a autenticação de dois fatores (2FA) e por que é importante?
+
+a) Um método de criptografia de dados
+b) Um protocolo de autenticação de rede
+c) Um processo de validação que requer duas formas diferentes de identificação para acessar uma conta
+d) Um tipo de ataque cibernético
+
+14 - O que é um ataque de injeção de SQL?
+
+a) Um ataque que sequestra arquivos e exige um resgate
+b) Um método para criptografar dados
+c) Uma técnica de engenharia social para obter senhas
+d) Um ataque que explora vulnerabilidades em aplicativos da web
+
+15 - O que é um vírus de computador e como ele se propaga?
+
+a) Um tipo de ataque de negação de serviço (DDoS)
+b) Um programa malicioso que se anexa a arquivos e se espalha quando esses arquivos são compartilhados
+c) Uma técnica de criptografia de dados
+d) Um protocolo de segurança de rede
+
+16 - Qual é a importância de manter o software e os sistemas operacionais atualizados?
+
+a) Para aumentar o desempenho do computador
+b) Para economizar dinheiro em licenças de software
+c) Para corrigir vulnerabilidades de segurança e bugs
+d) Para garantir a compatibilidade com dispositivos mais antigos
+
+17 - O que é um ataque de negação de serviço (DDoS) e como ele funciona?
+
+a) Um ataque que sobrecarrega um servidor de rede
+b) Uma técnica para ocultar endereços IP
+c) Um protocolo de autenticação de rede
+d) Um método para criptografar e-mails
+
+18 - O que é engenharia reversa e como ela está relacionada à segurança da informação?
+
+a) Um ataque que rouba informações pessoais
+b) Um processo de desmontar e analisar um software ou hardware para entender seu funcionamento interno
+c) Um ataque que explora vulnerabilidades no software
+d) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+
+19 - Qual é a diferença entre um firewall de hardware e um firewall de software?
+
+a) Um firewall de hardware é um dispositivo físico, enquanto um firewall de software é um programa de computador
+b) Ambos são a mesma coisa e podem ser usados indistintamente
+c) Um firewall de hardware é mais vulnerável a ataques cibernéticos
+d) Um firewall de software é mais caro que um firewall de hardware
+
+20 - O que é criptografia de ponta a ponta e em que contexto é comumente usada?
+
+a) Um protocolo de criptografia de dados
+b) Uma técnica de segurança usada em dispositivos móveis
+c) Um método de codificação de dados que torna a comunicação ilegível para terceiros, apenas as partes envolvidas podem decifrar
+d) Uma técnica para ocultar endereços IP
+
+21 - O que é um ataque de spear phishing?
+
+a) Um ataque que rouba informações pessoais
+b) Um tipo de ataque de força bruta
+c) Um ataque de phishing direcionado a uma pessoa ou organização específica, geralmente usando informações personalizadas
+d) Um ataque que envolve a engenharia social
+
+22 - O que é a autenticação de dois fatores (2FA) baseada em token?
+
+a) Um protocolo de autenticação de rede
+b) Um método de autenticação que envolve o uso de um dispositivo físico, como um token, para gerar códigos temporários
+c) Um tipo de ataque cibernético
+d) Um protocolo de criptografia usado para proteger a comunicação na internet
+
+23 - O que é a GDPR (Regulamento Geral de Proteção de Dados) e qual é sua importância para a segurança da informação?
+
+a) Um protocolo de segurança de rede
+b) Uma lei europeia que regula a proteção de dados pessoais e a privacidade dos cidadãos
+c) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+d) Um protocolo de autenticação de rede
+
+24 - O que é uma VPN (Rede Virtual Privada) e como ela ajuda na segurança da informação?
+
+a) Uma técnica de segurança usada em dispositivos móveis
+b) Um protocolo de criptografia de dados
+c) Uma conexão segura que permite o acesso a redes privadas pela internet, protegendo a comunicação de terceiros
+d) Um ataque de negação de serviço (DDoS)
+
+25 - O que é engenharia social reversa?
+
+a) Um método para criptografar dados
+b) Um processo de manipulação psicológica que envolve convencer uma pessoa a fazer algo contra sua vontade
+c) Um ataque que explora vulnerabilidades no software
+d) Um tipo de ataque de phishing
+
+26 - Qual é a importância de fazer backup regularmente de dados e sistemas?
+
+a) Para economizar espaço de armazenamento
+b) Para evitar atualizações de software
+c) Para proteger contra perda de dados devido a falhas de hardware, ataques de malware ou desastres
+d) Para aumentar a velocidade da conexão de rede
+
+27 - O que é um ataque de "man-in-the-middle" e como ele funciona?
+
+a) Um ataque que sobrecarrega um servidor de rede
+b) Um ataque que sequestra arquivos e exige um resgate
+c) Um ataque que intercepta a comunicação entre duas partes, sem que elas saibam
+d) Um ataque que envolve a engenharia social
+
+28 - O que é um "honeypot" e qual é o seu propósito na segurança da informação?
+
+a) Um ataque que rouba informações pessoais
+b) Uma técnica de segurança usada em dispositivos móveis
+c) Um sistema de armadilha projetado para atrair hackers e monitorar suas atividades
+d) Um protocolo de segurança de rede
+
+29 - O que é autenticação de biometria e como ela é usada na segurança da informação?
+
+a) Um método de autenticação que envolve o uso de características físicas únicas, como impressões digitais ou reconhecimento facial
+b) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+c) Um protocolo de autenticação de rede
+d) Um processo de criptografia de dados
+
+30 - O que é a política de privacidade de dados e por que é importante?
+
+a) Uma técnica para ocultar endereços IP
+b) Um tipo de ataque cibernético
+c) Um conjunto de regras que define como os dados pessoais dos usuários são coletados, armazenados e usados por uma organização
+d) Um ataque que explora vulnerabilidades no software
+
+31 - O que é criptomoeda e como a segurança da informação está relacionada ao seu uso?
+
+a) Uma técnica para ocultar endereços IP
+b) Uma forma de dinheiro digital que utiliza criptografia para garantir transações seguras
+c) Um tipo de ataque cibernético
+d) Uma técnica de criptografia de e-mail
+
+32 - O que é autenticação de dois fatores (2FA) baseada em biometria e como ela funciona?
+
+a) Um protocolo de segurança de rede
+b) Um método de autenticação que utiliza características físicas únicas, como impressões digitais ou reconhecimento facial
+c) Um ataque de negação de serviço (DDoS)
+d) Um protocolo de autenticação de rede
+
+33 - O que é um ataque de "zero-day" e por que é considerado uma ameaça grave à segurança da informação?
+
+a) Um tipo de ataque de força bruta
+b) Um ataque que explora vulnerabilidades conhecidas em sistemas e aplicativos
+c) Um ataque que ocorre em uma data específica
+d) Um ataque que explora uma vulnerabilidade desconhecida que ainda não foi corrigida pelos desenvolvedores
+
+34 - O que é criptografia de disco e como ela ajuda a proteger os dados armazenados em dispositivos?
+
+a) Um método para criptografar e-mails
+b) Um processo de codificação de todo o conteúdo de um disco rígido ou dispositivo de armazenamento
+c) Um protocolo de segurança de rede
+d) Um ataque que sequestra arquivos e exige um resgate
+
+35 - O que é um "firewall de inspeção profunda de pacotes" e como ele difere de um firewall tradicional?
+
+a) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+b) Uma técnica para ocultar endereços IP
+c) Um dispositivo de segurança que analisa o conteúdo dos pacotes de dados em busca de ameaças
+d) Um protocolo de autenticação de rede
+
+36 - O que é a autenticação de dois fatores (2FA) por meio de um aplicativo móvel e como ela funciona?
+
+a) Um tipo de ataque cibernético
+b) Um método de autenticação que utiliza um aplicativo móvel para gerar códigos temporários
+c) Uma técnica de segurança usada em dispositivos móveis
+d) Um protocolo de criptografia usado para proteger a comunicação na internet
+
+37 - O que é "engenharia social baseada em pretextos" e como funciona?
+
+a) Um ataque que explora vulnerabilidades no software
+b) Um método para criptografar dados
+c) Uma técnica de engenharia social que envolve a criação de pretextos ou histórias fictícias para obter informações confidenciais
+d) Um ataque de phishing
+
+38 - O que é um "sandbox" de segurança e qual é seu papel na proteção contra malware?
+
+a) Um protocolo de segurança de rede
+b) Uma técnica de criptografia de dados
+c) Um ambiente isolado e seguro em que os programas podem ser executados sem afetar o sistema principal
+d) Um dispositivo para proteger contra sobrecarga de tráfego na rede
+
+39 - O que é um "WAF" (Web Application Firewall) e como ele ajuda a proteger aplicativos da web?
+
+a) Uma técnica para ocultar endereços IP
+b) Um ataque de negação de serviço (DDoS)
+c) Um dispositivo de segurança que monitora e protege aplicativos da web contra ameaças e ataques cibernéticos
+d) Um protocolo de autenticação de rede
+
+40 - O que é um "certificado digital" e como ele é usado na autenticação e na segurança de transações online?
+
+a) Um método de criptografia de e-mail
+b) Um tipo de ataque cibernético
+c) Um arquivo digital que contém informações de identificação e chave pública, usado para autenticar identidades e proteger transações online
+d) Um protocolo de segurança de rede
+
+1 - B) Verificação por SMS
+2 - B) Uma técnica para manipular pessoas e obter informações confidenciais
+3 - B) Fazendo Uma técnica de engenharia social para obter senhas
+4 - C) Usar senhas complexas com letras, números e caracteres especiais
+5 - C) Um software usado para monitorar o tráfego de rede e bloquear atividades suspeitas
+6 - B) Instalar um antivírus atualizado
+7 - B) Um ataque que sequestra arquivos e exige um resgate para recuperá-los
+8 - C) Um processo de codificação de dados para torná-los ilegíveis sem a chave correta
+9 - C) Ataque de força bruta
+10 - C) Uma atualização de software projetada para corrigir vulnerabilidades de segurança
+11 - B) Um ataque que tenta todas as combinações possíveis de senhas até encontrar a correta
+12 - D) Um protocolo de criptografia usado para proteger a comunicação na internet
+13 - C) Um processo de validação que requer duas formas diferentes de identificação para acessar uma conta
+14 - D) Um ataque que explora vulnerabilidades em aplicativos da web
+15 - B) Um programa malicioso que se anexa a arquivos e se espalha quando esses arquivos são compartilhados
+16 - C) Para corrigir vulnerabilidades de segurança e bugs
+17 - A) Um ataque que sobrecarrega um servidor de rede
+18 - B) Um processo de desmontar e analisar um software ou hardware para entender seu funcionamento interno
+19 - A) Um firewall de hardware é um dispositivo físico, enquanto um firewall de software é um programa de computador
+20 - C) Um protocolo de criptografia usado para proteger a comunicação na internet
+21 - C) Um ataque de phishing direcionado a uma pessoa ou organização específica, geralmente usando informações personalizadas
+22 - B) Um método de autenticação que envolve o uso de um dispositivo físico, como um token, para gerar códigos temporários
+23 - B) Uma lei europeia que regula a proteção de dados pessoais e a privacidade dos cidadãos
+24 - C) Uma conexão segura que permite o acesso a redes privadas pela internet, protegendo a comunicação de terceiros
+25 - B) Um processo de manipulação psicológica que envolve convencer uma pessoa a fazer algo contra sua vontade
+26 - C) Para proteger contra perda de dados devido a falhas de hardware, ataques de malware ou desastres
+27 - C) Um ataque que intercepta a comunicação entre duas partes, sem que elas saibam
+28 - C) Um sistema de armadilha projetado para atrair hackers e monitorar suas atividades
+29 - A) Um método de autenticação que envolve o uso de características físicas únicas, como impressões digitais ou reconhecimento facial
+30 - C) Um conjunto de regras que define como os dados pessoais dos usuários são coletados, armazenados e usados por uma organização
+31 - B) Uma forma de dinheiro digital que utiliza criptografia para garantir transações seguras
+32 - B) Um método de autenticação que utiliza características físicas únicas, como impressões digitais ou reconhecimento facial
+33 - D) Um ataque que explora uma vulnerabilidade desconhecida que ainda não foi corrigida pelos desenvolvedores
+34 - B) Um processo de codificação de todo o conteúdo de um disco rígido ou dispositivo de armazenamento
+35 - C) Um dispositivo de segurança que analisa o conteúdo dos pacotes de dados em busca de ameaças
+36 - B) Um método de autenticação que utiliza um aplicativo móvel para gerar códigos temporários
+37 - C) Uma técnica de engenharia social que envolve a criação de pretextos ou histórias fictícias para obter informações confidenciais
+38 - C) Um ambiente isolado e seguro em que os programas podem ser executados sem afetar o sistema principal
+39 - C) Um dispositivo de segurança que monitora e protege aplicativos da web contra ameaças e ataques cibernéticos
+40 - C) Um arquivo digital que contém informações de identificação e chave pública, usado para autenticar identidades e proteger transações online
+
