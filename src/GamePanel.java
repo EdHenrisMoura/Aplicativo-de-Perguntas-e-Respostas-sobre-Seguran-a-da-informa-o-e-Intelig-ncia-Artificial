@@ -112,10 +112,29 @@ public class GamePanel extends JPanel {
     }
 
     private void verificarResposta(List<String> alternativas, int respostaJogador) {
-        int[] respostasCorretas = ((PerguntaIA) perguntas.get(perguntaAtual)).getRespostasCorretas();
+        Object perguntaObj = perguntas.get(perguntaAtual);
 
-        if (Arrays.stream(respostasCorretas).anyMatch(r -> r == respostaJogador)) {
-            pontuacao++;
+        if (perguntaObj instanceof PerguntaIA) {
+            PerguntaIA perguntaIA = (PerguntaIA) perguntaObj;
+            int[] respostasCorretas = perguntaIA.getRespostasCorretas();
+
+            if (Arrays.stream(respostasCorretas).anyMatch(r -> r == respostaJogador)) {
+                pontuacao++;
+            }
+        } else if (perguntaObj instanceof PerguntaSeguranca) {
+            PerguntaSeguranca perguntaSeguranca = (PerguntaSeguranca) perguntaObj;
+            int[] respostasCorretas = perguntaSeguranca.getRespostasCorretas();
+
+            if (Arrays.stream(respostasCorretas).anyMatch(r -> r == respostaJogador)) {
+                pontuacao++;
+            }
+        } else if (perguntaObj instanceof PerguntaMista) {
+            PerguntaMista perguntaMista = (PerguntaMista) perguntaObj;
+            int[] respostasCorretas = perguntaMista.getRespostasCorretas();
+
+            if (Arrays.stream(respostasCorretas).anyMatch(r -> r == respostaJogador)) {
+                pontuacao++;
+            }
         }
 
         perguntaAtual++;
@@ -123,27 +142,25 @@ public class GamePanel extends JPanel {
             exibirPergunta(perguntas.get(perguntaAtual));
         } else {
             mostrarResumo();
-            
         }
     }
 
-    private String getRespostaCorreta(List<String> alternativas, int[] respostasCorretas) {
-        for (int i = 0; i < alternativas.size(); i++) {
-            final int indiceAlternativa = i;
+    private String getRespostaCorreta(List<String> alternativas, char respostaJogadorChar) {
+        int indiceRespostaJogador = respostaJogadorChar - 'A';
 
-            if (Arrays.stream(respostasCorretas).anyMatch(r -> r == indiceAlternativa)) {
-                // Substir o marcador de resposta correta (*) e remova espaços em branco
-                String respostaCorreta = alternativas.get(i).substring(0).trim();
+        if (indiceRespostaJogador >= 0 && indiceRespostaJogador < alternativas.size()) {
+            // Substitui o marcador de resposta correta (*) e remover espaços em branco
+            String respostaCorreta = alternativas.get(indiceRespostaJogador).substring(0).trim();
 
-                // Adicionar o código abaixo para garantir que você está pegando a resposta correta
-                if (respostaCorreta.length() > 0) {
-                    return respostaCorreta;
-                } else {
-                    return alternativas.get(i).substring(1).trim(); // Remova apenas o primeiro caractere
-                }
+            // Adiciona o código abaixo para garantir que você está pegando a resposta correta
+            if (respostaCorreta.length() > 0) {
+                return respostaCorreta;
+            } else {
+                return alternativas.get(indiceRespostaJogador).substring(1).trim(); // Remover apenas o primeiro caractere
             }
         }
-        return ""; // Retorna uma string vazia se nenhuma resposta correta for encontrada
+
+        return ""; // Retorna uma string vazia se a resposta do jogador estiver fora dos limites
     }
 
     private void mostrarResumo() {
@@ -151,32 +168,34 @@ public class GamePanel extends JPanel {
         resumoTextArea.setEditable(false);
         resumoTextArea.append("Pontuação Final: " + pontuacao + " de " + perguntas.size() + " perguntas\n\n");
 
-        String pergunta;
-
         for (int i = 0; i < perguntas.size(); i++) {
             Object perguntaObj = perguntas.get(i);
             List<String> alternativas = null;
             char respostaJogadorChar = ' ';
-            
-            
 
             if (perguntaObj instanceof PerguntaIA) {
                 PerguntaIA perguntaIA = (PerguntaIA) perguntaObj;
                 alternativas = Arrays.asList(perguntaIA.getAlternativas());
                 respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaIA.getAlternativas(), perguntaIA.getRespostasCorretas()));
-                pergunta = perguntaIA.getPergunta();
             } else if (perguntaObj instanceof PerguntaSeguranca) {
                 PerguntaSeguranca perguntaSeguranca = (PerguntaSeguranca) perguntaObj;
                 alternativas = Arrays.asList(perguntaSeguranca.getAlternativas());
                 respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaSeguranca.getAlternativas(), perguntaSeguranca.getRespostasCorretas()));
-                pergunta = perguntaSeguranca.getPergunta();
             } else if (perguntaObj instanceof PerguntaMista) {
                 PerguntaMista perguntaMista = (PerguntaMista) perguntaObj;
                 alternativas = Arrays.asList(perguntaMista.getAlternativas());
                 respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaMista.getAlternativas(), perguntaMista.getRespostasCorretas()));
-                pergunta = perguntaMista.getPergunta();
             } else {
-                pergunta = ""; 
+                continue; // Pula para a próxima iteração do loop se a pergunta não for reconhecida
+            }
+
+            String pergunta = "";
+            if (perguntaObj instanceof PerguntaIA) {
+                pergunta = ((PerguntaIA) perguntaObj).getPergunta();
+            } else if (perguntaObj instanceof PerguntaSeguranca) {
+                pergunta = ((PerguntaSeguranca) perguntaObj).getPergunta();
+            } else if (perguntaObj instanceof PerguntaMista) {
+                pergunta = ((PerguntaMista) perguntaObj).getPergunta();
             }
 
             resumoTextArea.append("Pergunta " + (i + 1) + " - " + pergunta + ":\n");
@@ -186,14 +205,10 @@ public class GamePanel extends JPanel {
             } else {
                 resumoTextArea.append("Incorreto\n");
             }
-            
-            
+
             JLabel perguntaLabel = new JLabel("<html>" + pergunta.replaceAll("\\n", "<br>") + "</html>");
             perguntaLabel.setFont(new Font("Arial", Font.PLAIN, 20)); // Ajustar o tamanho da fonte conforme necessário
-            resumoTextArea.append("Pergunta " + (i + 1) + " - ");
-            resumoTextArea.add(perguntaLabel);  // Adiciona a JLabel no JTextArea
-
-            resumoTextArea.append("Resposta Correta: " + getRespostaCorreta(alternativas, ((PerguntaIA) perguntas.get(i)).getRespostasCorretas()) + "\n");
+            resumoTextArea.append("Resposta Correta: " + getRespostaCorreta(alternativas, respostaJogadorChar) + "\n");
             resumoTextArea.append("Resposta do Jogador: " + (i < pontuacao ? "Correta" : "Incorreta") + "\n\n");
         }
 
@@ -219,15 +234,12 @@ public class GamePanel extends JPanel {
         });
 
         JPanel resumoPanel = new JPanel(new BorderLayout());
-        //resumoPanel.add(new JScrollPane(resumoTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
-
         resumoPanel.add(new JScrollPane(resumoTextArea), BorderLayout.CENTER);
         resumoPanel.add(backButton, BorderLayout.SOUTH);
 
         frame.setContentPane(resumoPanel);
         frame.revalidate();
     }
-
 
     private int getRespostaJogador(String[] alternativas, int[] respostasCorretas) {
         for (int i = 0; i < alternativas.length; i++) {
@@ -257,18 +269,18 @@ public class GamePanel extends JPanel {
             }
         }
 
-        // Volte para o menu principal, independentemente da escolha do jogador
+        // Volta para o menu principal, independentemente da escolha do jogador
         frame.setContentPane(new MainMenuPanel(frame));
         frame.revalidate();
     }
 
     private void salvarPontuacaoNoTXT(String nomeJogador, int pontuacao, String difficulty) {
         try {
-            // Criar ou abrir o arquivo de texto
+            // Cria ou abre o arquivo de texto
             FileWriter writer = new FileWriter("scoreboard.txt", true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
-            // Escrever a pontuação, o nome do jogador e a dificuldade no arquivo
+            // Escreve a pontuação, o nome do jogador e a dificuldade no arquivo
             bufferedWriter.write(nomeJogador + " - " + pontuacao + " - " + difficulty);
             bufferedWriter.newLine();
 
