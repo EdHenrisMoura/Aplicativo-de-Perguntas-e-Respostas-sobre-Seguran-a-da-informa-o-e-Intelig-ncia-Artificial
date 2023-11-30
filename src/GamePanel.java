@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -17,6 +16,7 @@ public class GamePanel extends JPanel {
     private String difficulty;
     private int pontuacao = 0;
     private int perguntaAtual = 0;
+    private int alternativaEscolhidaPeloJogador; // Novo campo
 
     public GamePanel(JFrame frame, List<?> perguntas, String difficulty) {
         this.frame = frame;
@@ -39,7 +39,6 @@ public class GamePanel extends JPanel {
                 exibirPergunta(perguntas.get(perguntaAtual));
             } else {
                 mostrarResumo();
-                
             }
         });
         add(nextButton, BorderLayout.SOUTH);
@@ -84,6 +83,7 @@ public class GamePanel extends JPanel {
             button.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
+                    alternativaEscolhidaPeloJogador = respostaJogador; // Armazena a alternativa escolhida pelo jogador
                     verificarResposta(alternativas, respostaJogador);
                 }
             });
@@ -171,20 +171,17 @@ public class GamePanel extends JPanel {
         for (int i = 0; i < perguntas.size(); i++) {
             Object perguntaObj = perguntas.get(i);
             List<String> alternativas = null;
-            char respostaJogadorChar = ' ';
+            char respostaJogadorChar = (char) ('A' + alternativaEscolhidaPeloJogador);
 
             if (perguntaObj instanceof PerguntaIA) {
                 PerguntaIA perguntaIA = (PerguntaIA) perguntaObj;
                 alternativas = Arrays.asList(perguntaIA.getAlternativas());
-                respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaIA.getAlternativas(), perguntaIA.getRespostasCorretas()));
             } else if (perguntaObj instanceof PerguntaSeguranca) {
                 PerguntaSeguranca perguntaSeguranca = (PerguntaSeguranca) perguntaObj;
                 alternativas = Arrays.asList(perguntaSeguranca.getAlternativas());
-                respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaSeguranca.getAlternativas(), perguntaSeguranca.getRespostasCorretas()));
             } else if (perguntaObj instanceof PerguntaMista) {
                 PerguntaMista perguntaMista = (PerguntaMista) perguntaObj;
                 alternativas = Arrays.asList(perguntaMista.getAlternativas());
-                respostaJogadorChar = (char) ('A' + getRespostaJogador(perguntaMista.getAlternativas(), perguntaMista.getRespostasCorretas()));
             } else {
                 continue; // Pula para a próxima iteração do loop se a pergunta não for reconhecida
             }
@@ -269,7 +266,6 @@ public class GamePanel extends JPanel {
             }
         }
 
-        // Volta para o menu principal, independentemente da escolha do jogador
         frame.setContentPane(new MainMenuPanel(frame));
         frame.revalidate();
     }
