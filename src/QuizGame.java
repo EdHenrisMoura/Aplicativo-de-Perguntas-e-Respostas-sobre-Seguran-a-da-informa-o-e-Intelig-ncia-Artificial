@@ -38,7 +38,7 @@ class MainMenuPanel extends JPanel {
 
         add(new JLabel("Bem-vindo ao jogo de quiz", SwingConstants.CENTER));
         addButton("Jogar", e -> showCategoryScreen());
-        addButton("Sobre o Jogo", e -> showTextScreen("Template sobre o jogo"));
+        addButton("Sobre o Jogo", e -> showTextScreen("Jogo de perguntas e respostas onde você escolhe sua caterogia, e em seguida a dificuldade. Fácil  são 10 questões, Médio são 20 e Difícil são 40"));
        // addButton("Créditos", e -> showTextScreen("Template créditos"));
         addButton("Scoreboard", e -> showScoreboardScreen());
         addButton("Sair", e -> System.exit(0));
